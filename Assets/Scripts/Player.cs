@@ -8,7 +8,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //config params
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float walkSpeed = 5f;
+    [SerializeField] float runSpeed = 7f;
     [SerializeField] float jumpVelocity = 3f;
     [SerializeField] float extraRunSpeed = 0f;
     
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     BoxCollider2D myFeet;
     Animator myAnimator;
     Transform myTransform;
+
     //GameObject hand;
     //GameObject sword;
 
@@ -43,8 +45,42 @@ public class Player : MonoBehaviour
     {
         CheckDirection();
         Jump();
+        Idle();
+        Walk();
+        Run();
     }
 
+    private void Idle()
+    {
+        if (!(Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon))
+            
+        {
+            myAnimator.SetTrigger("Idling");
+        }
+    }
+
+    private void Walk()
+    {
+        if ((Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && !Input.GetKey(KeyCode.LeftShift))
+        {
+            myAnimator.SetTrigger("Walking");
+            float walkControlThrow = Input.GetAxis("Horizontal");
+            float walkVelocity = walkControlThrow * walkSpeed;
+            myRigidbody.velocity = new Vector2(walkVelocity, myRigidbody.velocity.y);
+            
+        }
+    }
+
+    private void Run()
+    {
+        if ((Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && Input.GetKey(KeyCode.LeftShift))
+        {
+            myAnimator.SetTrigger("Running");
+            float runControlThrow = Input.GetAxis("Horizontal");
+            float runVelocity = runControlThrow * runSpeed;
+            myRigidbody.velocity = new Vector2(runVelocity, myRigidbody.velocity.y);
+        }
+    }
 
     private void Jump()
     {

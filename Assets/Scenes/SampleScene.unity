@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149538318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.97, y: -1.2, z: 0}
+  m_LocalPosition: {x: -3.912, y: -2.779, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1479041983}
@@ -287,8 +287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05198431, y: 0.00013142824}
-  m_Size: {x: 0.6458597, y: 0.9974321}
+  m_Offset: {x: 0.037989497, y: 0.007131815}
+  m_Size: {x: 0.573087, y: 0.98343134}
   m_Direction: 0
 --- !u!50 &149538323
 Rigidbody2D:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d9792139672824f9caaeddcaab107c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.8
+  walkSpeed: 5
   jumpVelocity: 12
   extraRunSpeed: 2
   isRunning: 0
@@ -339,10 +339,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058789253, y: -0.44132608}
+  m_Offset: {x: 0.058789253, y: -0.47119272}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -353,7 +353,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3359108, y: 0.10262811}
+  m_Size: {x: 0.3359108, y: 0.08714175}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 1440308950}
   - component: {fileID: 1440308949}
   - component: {fileID: 1440308948}
+  - component: {fileID: 1440308951}
   m_Layer: 10
   m_Name: Foreground
   m_TagString: Untagged
@@ -1167,7 +1168,7 @@ TilemapCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
@@ -1210,11 +1211,30 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 5ce5f694751f59242b167ce5e6498901, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!251 &1440308951
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440308944}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1473898623
 GameObject:
   m_ObjectHideFlags: 0
