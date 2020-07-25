@@ -507,7 +507,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
   m_LocalPosition: {x: -1.7508607, y: -1.0087352, z: -10}
-  m_LocalPosition: {x: -1.7420983, y: -1.0087266, z: -10}
 =======
   m_LocalPosition: {x: -1.7420983, y: -1.0087266, z: -10}
 >>>>>>> parent of 53c4f00... Fixed pixelated camera bug, added state driven camera
@@ -3319,7 +3318,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
   m_LocalPosition: {x: -7.43, y: -2.56, z: -10}
-  m_LocalPosition: {x: -8.09, y: -2.2599998, z: -10}
 =======
   m_LocalPosition: {x: -8.09, y: -2.2599998, z: -10}
 >>>>>>> parent of 53c4f00... Fixed pixelated camera bug, added state driven camera
