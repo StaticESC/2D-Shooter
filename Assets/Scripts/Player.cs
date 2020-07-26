@@ -12,8 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] float runSpeed = 7f;
     [SerializeField] float jumpVelocity = 3f;
     [SerializeField] float extraRunSpeed = 0f;
-    
-    
+    [SerializeField] public int health = 100;
+
+
     //cache
     Rigidbody2D myRigidbody;
     BoxCollider2D myFeet;
@@ -48,6 +49,11 @@ public class Player : MonoBehaviour
         Idle();
         Walk();
         Run();
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Idle()
