@@ -44,6 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 2492965997
     locked: 0
+  - name: Weapon
+    uniqueID: 1292477235
+    locked: 0
+  - name: Hand
+    uniqueID: 3168828919
+    locked: 0
   - name: Player
     uniqueID: 2181836095
     locked: 0
