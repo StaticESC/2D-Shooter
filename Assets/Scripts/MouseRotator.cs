@@ -16,6 +16,6 @@ public class MouseRotator : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
         Vector2 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
-        transform.up = direction;
+        transform.up = direction; //makes it "look in" the given direction
     }
 }

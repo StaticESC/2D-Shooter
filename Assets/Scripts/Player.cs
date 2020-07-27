@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] float runSpeed = 7f;
     [SerializeField] float jumpVelocity = 3f;
-    [SerializeField] float extraRunSpeed = 0f;
     
     
     //cache
@@ -25,8 +24,6 @@ public class Player : MonoBehaviour
 
 
     //states
-    [SerializeField] bool isRunning = false;
-    [SerializeField] bool isWalking = false;
     [SerializeField] bool isFacingRight = true;
 
 
@@ -100,12 +97,10 @@ public class Player : MonoBehaviour
 
         if(mousePos.x > myTransform.position.x && !isFacingRight)
         {
-            Debug.Log("Right");
             Flip();
         }
         else if(mousePos.x < myTransform.position.x && isFacingRight)
         {
-            Debug.Log("Left");
             Flip();
         }
 
