@@ -694,13 +694,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708999000}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70778835, w: 0.70642465}
-  m_LocalPosition: {x: 0.047999967, y: 0.44199994, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.013, y: 0.558, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485808595}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.11}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &708999003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1399dbe55512f4943bc6e985d3482438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 2839325192419348839, guid: 8fddbc299a16a1f4fabe2351f4d84d00, type: 3}
+  timeToDestroyBullet: 3
 --- !u!1 &750489263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1822,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!251 &1440308951
 PlatformEffector2D:
