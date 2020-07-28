@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3862690459364909587}
   - component: {fileID: 1036031663798944414}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: Pistol Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29eeb944e6d4d84a9f7a93cbaae88d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletVelocityX: 15
+  bulletVelocity: 20
+  damage: 20
 --- !u!50 &3862690459364909587
 Rigidbody2D:
   serializedVersion: 4

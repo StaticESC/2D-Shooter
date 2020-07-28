@@ -7,6 +7,7 @@ TagManager:
   - Sword
   - Pistol
   - Bare
+  - Enemy
   layers:
   - Default
   - TransparentFX
